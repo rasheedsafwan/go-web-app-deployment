@@ -74,7 +74,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/go-web-app:${{ github.run_id }}
-          platforms: linux/arm64/v8  # Removed linux/amd64 as per your request
+          platforms: linux/arm64/v8, linux/amd64  # Removed linux/amd64 as per your request
 
   update-newtag-in-helm-chart:
     runs-on: ubuntu-latest
