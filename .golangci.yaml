@@ -1,9 +1,19 @@
+run:
+  timeout: 5m
+  tests: false
+
 linters:
-  disable-all: true  # Disable all linters
+  disable-all: true  # Disable all linters initially
   enable:
-    - golint        # Enable only golint
-    - errcheck      # Enable errcheck to catch unhandled errors
+    - govet       # Basic linting to catch common Go errors
+    - errcheck    # Checks for unhandled errors
+    - staticcheck # Static analysis to catch potential bugs
 
 issues:
-  exclude-rules:
-    - path: _test\.go  # Ignore test files
+  max-same-issues: 10  # Avoid overwhelming with too many of the same issue
+  max-issues-per-linter: 50  # Limit to 50 issues per linter
+
+output:
+  format: colored-line-number
+  print-issued-lines: true
+  print-linter-name: true
