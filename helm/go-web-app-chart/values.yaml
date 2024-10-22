@@ -8,7 +8,7 @@ image:
   repository: safwinho/go-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "11465268731"
+  tag: "11465459301"
 
 ingress:
   enabled: false
