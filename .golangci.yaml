@@ -1,14 +1,6 @@
-linters-settings:
-  # Enable only minimal linting to reduce code issues
-  govet:
-    enable: false
-  staticcheck:
-    enable: false
-  errcheck:
-    enable: false
-
+linters:
+  enable:
+    - errcheck  # Check for unhandled errors
+    - govet     # Report potential mistakes
 run:
-  skip-dirs:
-    - vendor
-  skip-files:
-    - "*.test.go"
+  tests: true
