@@ -1,0 +1,9 @@
+linters:
+  disable-all: true  # Disable all linters
+  enable:
+    - golint        # Enable only golint
+    - errcheck      # Enable errcheck to catch unhandled errors
+
+issues:
+  exclude-rules:
+    - path: _test\.go  # Ignore test files

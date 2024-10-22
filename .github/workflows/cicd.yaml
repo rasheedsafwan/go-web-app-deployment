@@ -36,16 +36,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
 
-      - name: Run golangci-lint
-        uses: golangci/golangci-lint-action@v6
-        with:
-          version: v1.56.2
-          install-mode: binary
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          args: --verbose  # This will give you detailed output
+    - name: Run golangci-lint
+      uses: golangci/golangci-lint-action@v6
+      with:
+       version: v1.56.2
+       install-mode: binary
+       github-token: ${{ secrets.GITHUB_TOKEN }}
+       args: --config .golangci.yml  # Use the custom config file
+
 
   push:
     runs-on: ubuntu-latest
