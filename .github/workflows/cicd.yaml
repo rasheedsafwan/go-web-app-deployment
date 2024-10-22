@@ -45,7 +45,7 @@ jobs:
        version: v1.56.2
        install-mode: binary
        github-token: ${{ secrets.GITHUB_TOKEN }}
-       args: --config .golangci.yml  # Use the custom config file
+       args: --config .golangci.yaml  # Use the custom config file
 
 
   push:
