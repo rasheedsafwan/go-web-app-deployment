@@ -40,10 +40,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Make dummy-lint.sh executable
-        run: chmod +x ./dummy-lint.sh  # Ensure the script is executable
+        run: chmod +x dummylint.sh  # Ensure the script is executable
 
       - name: Run dummy lint check
-        run: bash ./dummy-lint.sh
+        run: bash dummylint.sh
         
   push:
     runs-on: ubuntu-latest
